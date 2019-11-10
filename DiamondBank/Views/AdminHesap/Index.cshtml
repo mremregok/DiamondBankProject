@@ -1,0 +1,30 @@
+﻿@using DiamondBank.Models.Entity
+@model List<TBLHesap>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Hesap ID</th>
+        <th>Müşteri ID</th>
+        <th>Hesap Açılış Tarihi</th>
+        <th>Aktiflik</th>
+        <th>Mevduat Miktarı</th>
+    </tr>
+    <tbody>
+        @foreach (var hesap in Model)
+        {
+        <tr>
+            <th>@hesap.HesapID</th>
+            <td>@hesap.MusteriID</td>
+            <td>@hesap.HesapAcilisTarihi</td>
+            <td>@hesap.Aktiflik</td>
+            <td>@hesap.MevduatMiktari</td>
+            <td><a href="/Admin/HesapSil/@hesap.HesapID" class="btn btn-danger">SİL</a></td>
+            <td><a href="/AdminHesap/HesapBilgileriniGetir/@hesap.HesapID" class="btn btn-success">GÜNCELLE</a></td>
+        </tr>
+        }
+    </tbody>
+</table>

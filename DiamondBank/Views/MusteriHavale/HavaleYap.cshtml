@@ -1,0 +1,16 @@
+﻿@model DiamondBank.Models.Entity.TBLHesap
+@{
+    ViewBag.Title = "HavaleYap";
+    Layout = "~/Views/Shared/_MusteriLayout.cshtml";
+}
+
+<form class="form-control" method="post">
+    <div>
+        Yatırmak istediğiniz hesap numarasını giriniz.
+        <input class="form-control" name="HesapID" type="text" />
+        <br />
+        Yatırmak istediğiniz tutarı giriniz.
+        <input class="form-control" name="MevduatMiktari" type="number" pattern="{18,2}" />
+    </div>
+</form>
+

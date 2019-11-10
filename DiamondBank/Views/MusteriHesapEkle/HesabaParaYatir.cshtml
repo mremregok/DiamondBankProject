@@ -1,0 +1,14 @@
+﻿@model DiamondBank.Models.Entity
+@{
+    ViewBag.Title = "HesabaParaYatir";
+    Layout = "~/Views/Shared/_MusteriLayout.cshtml";
+}
+
+    <form class="form-control" method="post">
+        <div>
+            <input class="form-control" type="number" name="MevduatMiktari" pattern="{18,2}" placeholder="Yatırılacak miktarı giriniz..." />
+            <button class="btn btn-primary" name="MevduatMiktari">Para Yatır</button>
+        </div>
+        @ViewBag.Message
+    </form>
+

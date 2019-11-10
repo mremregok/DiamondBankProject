@@ -1,0 +1,38 @@
+﻿@using DiamondBank.Models.Entity
+@model List<TBLMusteri>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Müşteri ID</th>
+        <th>TCNO</th>
+        <th>Müşteri Ad</th>
+        <th>Müşteri Soyad</th>
+        <th>Cinsiyet</th>
+        <th>Doğum Tarihi</th>
+        <th>Kayıt Tarihi</th>
+        <th>Verilebilecek Kredi Miktarı</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    <tbody>
+        @foreach(var musteri in Model)
+        {
+        <tr>
+            <th>@musteri.MusteriID</th>
+            <td>@musteri.TCNO</td>
+            <td>@musteri.MusteriAdi</td>
+            <td>@musteri.MusteriSoyadi</td>
+            <td>@musteri.Cinsiyet</td>
+            <td>@musteri.DogumTarihi</td>
+            <td>@musteri.KayitTarihi</td>
+            <td>@musteri.VerilebilecekKrediMiktari</td>
+            <td><a href="/Admin/MusteriSil/@musteri.MusteriID" class="btn btn-danger">SİL</a></td>
+            <td><a href="/Admin/MusteriBilgileriniGetir/@musteri.MusteriID" class="btn btn-success">GÜNCELLE</a></td>
+        </tr>
+        }
+    </tbody>
+</table>

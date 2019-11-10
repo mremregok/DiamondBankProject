@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<form method="post" class="form-group">
+    <div>
+        <label>Giriş Yap</label>
+        <input type="text" class="form-control" name="TCNO" />
+    </div>
+    <div>
+        <label>Şifre</label>
+        <input type="password" class="form-control" name="Sifre" />
+    </div>
+    <div>
+        <button class="btn btn-info">Giriş Yap</button>
+    </div>
+    <a href="/Home/Register/">Hesabın yok mu? TIKLA ve Kayıt ol!</a>
+    @ViewBag.Hata
+    @TempData["Message"]
+</form>

@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "HesapEkle";
+    Layout = "~/Views/Shared/_MusteriLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div>
+        <label>Ne kadar mevduat ile açmak istiyorsunuz? (Başlangıç maksimum 10.000 TL olabilir...)</label>
+        <input type="text" pattern="{18,2}" class ="form-control" name="MevduatMiktari" placeholder="Bir şeyler gir...">
+    </div>
+    <div>
+        <button class="btn btn-primary">Ekle</button>
+    </div>
+    @ViewBag.Onay
+    @ViewBag.Message
+</form>
+

@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Kayıt Ol</h2>
+
+<form class="form-control" method="post">
+    <div>
+        <label>TCNO</label>
+        <input type="text" pattern="\d{11}" class="form-control" name="TCNO" placeholder="11 Haneli TC No" title="Sadece rakam giriniz ve 11 basamak kullanınız." required />
+    </div>
+    <div>
+        <label>Adınız</label>
+        <input type="text" class="form-control" name="MusteriAdi" placeholder="Müşteri Adı" required />
+    </div>
+    <div>
+        <label>Soyadınız</label>
+        <input type="text" class="form-control" name="MusteriSoyadi" placeholder="Müşteri Soyadı" required />
+    </div>
+    <div>
+        <label>Doğum Tarihi</label>
+        <input type="text" class="form-control" name="DogumTarihi" placeholder="(DD/MM/YYYY)" />
+    </div>
+    <div>
+        Cinsiyet <select id="Cinsiyet" name="Cinsiyet" class="form-control">
+
+            <option value=""></option>
+
+            <option value="Erkek">Erkek</option>
+
+            <option value="Kadın">Kadın</option>
+        </select>
+    </div>
+    <div>
+        <label>Şifre</label>
+        <input type="password" class="form-control" name="Sifre" placeholder="Şifreniz ***" required />
+    </div>
+    <div>
+        <button class="btn btn-primary">Kayıt Ol</button>,
+
+    </div>
+    <button class="btn btn-warning"><a href="/Home/Index">Geri Dön</a></button>
+</form>
+

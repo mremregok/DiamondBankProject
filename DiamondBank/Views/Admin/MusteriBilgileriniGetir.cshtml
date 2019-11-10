@@ -1,0 +1,36 @@
+﻿@model DiamondBank.Models.Entity.TBLMusteri
+@{
+    ViewBag.Title = "MusteriGuncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+    <h2>MusteriGuncelle</h2>
+
+@using (Html.BeginForm("Guncelle", "Admin", FormMethod.Post))
+{
+<div class="form-group">
+    Müşteri ID
+    @Html.TextBoxFor(m => m.MusteriID, new { @class = "form-control" })
+    <br />
+    Müşteri Adı
+    @Html.TextBoxFor(m => m.MusteriAdi, new { @class = "form-control" })
+    <br />
+    Müşteri Soyadı
+    @Html.TextBoxFor(m => m.MusteriSoyadi, new { @class = "form-control" })
+    <br />
+    Cinsiyet
+    @Html.TextBoxFor(m => m.Cinsiyet, new { @class = "form-control" })
+    <br />
+    Doğum Tarihi
+    @Html.TextBoxFor(m => m.DogumTarihi, new { @class = "form-control" })
+    <br />
+    Şifre
+    @Html.TextBoxFor(m => m.Sifre, new { @class = "form-control" })
+    <br />
+
+</div>
+
+    <div>
+        <button class="btn btn-primary">GÜNCELLE</button>
+    </div>
+}
